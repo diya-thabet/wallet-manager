@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --grey-0: #fff;
+  --grey-1: #fdfdfd;
+  --grey-2: #f7f7f7;
+  --grey-3: #eff2f3;
+  --grey-4: #ccc;
+  --grey-5: #999;
+  --grey-6: #666;
+  --grey-7: #333;
+  --grey-8: #222;
+  --grey-9: #000;
+  --grey-1-a0: rgba(253, 253, 253, 0);
+  --grey-1-a7: rgba(253, 253, 253, 0.7);
+  --grey-1-a5: rgba(253, 253, 253, 0.5);
+  --grey-1-a3: rgba(253, 253, 253, 0.3);
+  --grey-9-a1: rgba(0, 0, 0, 0.1);
+  --grey-9-a5: rgba(0, 0, 0, 0.5);
+  --grey-2-a0: rgba(247, 247, 247, 0);
+  --color-cyan-extra-light: #c8f4ff;
+  --color-pink-light: #4dc1de;
+  --color-cyan-light: #03aed8;
+  --color-red: #4dc1de;
+  --color-pink: #2e6fd6;
+  --color-orange: #03aed8;
+  --color-yellow: #eab700;
+  --color-green: #0a7426;
+  --color-aqua: #3e999f;
+  --color-blue: #000;
+  --color-purple: #9d5b8b;
+  --color-grey: #869194;
+  --color-red-a1: rgba(77, 193, 222, 0.1);
+  --color-red-a3: rgba(77, 193, 222, 0.3);
+  --color-pink-a3: rgba(46, 111, 214, 0.3);
+  --color-pink-light-a3: rgba(46, 111, 214, 0.3);
+  --color-pink-light-a5: rgba(46, 111, 214, 0.5);
+  --color-pink-light-a7: rgba(46, 111, 214, 0.7);
+  --body-bg-shadow: var(--grey-2);
+  --box-bg-shadow: var(--grey-9-a1);
+  --text-color: var(--grey-7);
+  --header-text-color: var(--grey-0);
+  --primary-color: var(--color-pink);
+  --nav-bg: linear-gradient(
+    -225deg,
+    var(--color-cyan-light) 0,
+    var(--color-pink-light) 90%
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E9E9F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  min-width: 400px;
+  background-image: url(waves.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+.navbar > a {
+  text-decoration: none;
+  border-radius: 0.9375rem;
+  margin-bottom: 0.625rem;
+  display: block;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--grey-7);
+  transition: all 0.2s ease-in-out 0s;
+  line-height: 3;
+}
+.navbar > a.active {
+  background-image: linear-gradient(
+    to right,
+    var(--color-pink) 0,
+    var(--color-orange) 100%
+  );
+  box-shadow: 0 0 0.75rem var(--color-pink-a3);
+  color: var(--grey-0);
+}
+.navbar > a.active:hover {
+  box-shadow: 0 0 0.75rem var(--color-pink);
+}
+.navbar > a.rapport {
+  background-image: linear-gradient(
+    to right,
+    var(--color-pink-light) 0%,
+    var(--color-pink) 100%
+  );
+  color: var(--grey-3);
+  margin-left: 80px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.navbar > a.rapport:hover {
+  box-shadow: 0 0 0.75rem var(--color-purple);
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div :first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: rgb(65, 220, 101);
+}
+
+.money.minus {
+  color: rgb(255, 84, 96);
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    var(--color-pink) 0,
+    var(--color-orange) 100%
+  );
+  box-shadow: var(--box-shadow);
+  color: white;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.minus {
+  border-right: 5px solid rgb(255, 84, 96);
+}
+
+.list li.plus {
+  border-right: 5px solid rgb(65, 220, 101);
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.negative {
+  color: rgb(255, 84, 96);
+}
+
+#screen {
+  top: 145px;
+  width: 182px;
+  height: 135px;
+  background: #777;
+  border-radius: 5% / 50%;
+  box-shadow: inset -3px 3px 3px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  padding: 12px 12px 10px 10px;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 115%;
+}
+#container > section {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+#keypad {
+  top: 305px;
+  width: 200px;
+  height: 90px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#numpad {
+  top: 400px;
+  width: 200px;
+  height: 170px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#key-nav {
+  grid-row-end: span 2;
+}
+.key {
+  cursor: pointer;
+}
+.main {
+  height: 100%;
+  overflow: auto;
+  display: flex;
+}
+input[readonly] {
+  width: 100%;
+  background: none;
+  border: 0;
+  font-size: 150%;
+  box-sizing: border-box;
+}
+input[readonly]:focus {
+  outline: none;
+}
+.step {
+  width: 3px;
+  height: calc(14.2% - 2px - 0.5px);
+  margin: 1px;
+  background: rgba(0, 0, 0, 0.2);
+}
+#battery > .step,
+#battery:after {
+  margin-left: auto;
+}
+#call {
+  word-break: break-all;
+  font-size: 130%;
+}
+#signal:after,
+#battery:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#signal:after {
+  background-image: url(https://vignette.wikia.nocookie.net/khangnd/images/b/b6/Nokia-signal.PNG);
+}
+#battery:after {
+  background-image: url(https://vignette.wikia.nocookie.net/khangnd/images/8/82/Nokia-battery.PNG);
+}
+.header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  font-size: 75%;
+  font-weight: normal;
+}
+.header:before,
+.header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  margin: 0 3px;
+}
+#menu {
+  display: block;
+  text-align: center;
+  font-size: 130%;
+  background-size: 50%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.scrollbar {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: currentColor;
+  right: 0;
+  top: 0;
+  margin: 15px 2px 15px 0;
+}
+.scrollbar > .handle {
+  position: absolute;
+  left: -2px;
+  width: 4px;
+  border: 1px solid;
+  border-radius: 4px;
+  background: #899776;
+}
+/* UTILITIES */
+.text-center {
+  text-align: center;
+  width: 100%;
+}
+.text-right {
+  text-align: right;
+  width: 100%;
+}
+.text-small {
+  font-size: 75%;
+}
+.mb-m20 {
+  margin-bottom: -20px;
+}
